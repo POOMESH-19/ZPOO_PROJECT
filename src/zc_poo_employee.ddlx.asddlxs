@@ -1,0 +1,170 @@
+@Metadata.layer: #CORE
+@UI.headerInfo.title.type: #STANDARD
+@UI.headerInfo.title.value: 'EmpID'
+@UI.headerInfo.description.type: #STANDARD
+@UI.headerInfo.description.value: 'EmpID'
+annotate view ZC_POO_EMPLOYEE with
+{
+  @EndUserText.label: 'EmpID'
+  @UI.facet: [ {
+    label: 'General Information', 
+    id: 'GeneralInfo', 
+    purpose: #STANDARD, 
+    position: 10 , 
+    type: #IDENTIFICATION_REFERENCE
+  } ]
+  @UI.identification: [ {
+    position: 10 , 
+    label: 'EmpID'
+  } ]
+  @UI.lineItem: [ {
+    position: 10 , 
+    label: 'EmpID'
+  } ]
+  @UI.selectionField: [ {
+    position: 10 
+  } ]
+  EmpID;
+  
+  @EndUserText.label: 'LeaveID'
+  @UI.identification: [ {
+    position: 20 , 
+    label: 'LeaveID'
+  } ]
+  @UI.lineItem: [ {
+    position: 20 , 
+    label: 'LeaveID'
+  } ]
+  @UI.selectionField: [ {
+    position: 20 
+  } ]
+  LeaveID;
+  
+  @EndUserText.label: 'EmpName'
+  @UI.identification: [ {
+    position: 30 , 
+    label: 'EmpName'
+  } ]
+  @UI.lineItem: [ {
+    position: 30 , 
+    label: 'EmpName'
+  } ]
+  @UI.selectionField: [ {
+    position: 30 
+  } ]
+  EmpName;
+  
+  @EndUserText.label: 'LeaveType'
+  @UI.identification: [ {
+    position: 40 , 
+    label: 'LeaveType'
+  } ]
+  @UI.lineItem: [ {
+    position: 40 , 
+    label: 'LeaveType'
+  } ]
+  @UI.selectionField: [ {
+    position: 40 
+  } ]
+  LeaveType;
+  
+  @EndUserText.label: 'FromDate'
+  @UI.identification: [ {
+    position: 50 , 
+    label: 'FromDate'
+  } ]
+  @UI.lineItem: [ {
+    position: 50 , 
+    label: 'FromDate'
+  } ]
+  @UI.selectionField: [ {
+    position: 50 
+  } ]
+  FromDate;
+  
+  @EndUserText.label: 'ToDate'
+  @UI.identification: [ {
+    position: 60 , 
+    label: 'ToDate'
+  } ]
+  @UI.lineItem: [ {
+    position: 60 , 
+    label: 'ToDate'
+  } ]
+  @UI.selectionField: [ {
+    position: 60 
+  } ]
+  ToDate;
+  
+  @EndUserText.label: 'Reason'
+  @UI.identification: [ {
+    position: 70 , 
+    label: 'Reason'
+  } ]
+  @UI.lineItem: [ {
+    position: 70 , 
+    label: 'Reason'
+  } ]
+  @UI.selectionField: [ {
+    position: 70 
+  } ]
+  Reason;
+  
+  @EndUserText.label: 'Status'
+  @UI.identification: [ {
+    position: 80 , 
+    label: 'Status'
+  } ]
+  @UI.lineItem: [ {
+    position: 80 , 
+    label: 'Status'
+  } ]
+  @UI.selectionField: [ {
+    position: 80 
+  } ]
+  Status;
+  
+  @UI.identification: [ {
+    position: 90 
+  } ]
+  @UI.lineItem: [ {
+    position: 90 
+  } ]
+  @UI.selectionField: [ {
+    position: 90 
+  } ]
+  CreatedBy;
+  
+  @UI.identification: [ {
+    position: 100 
+  } ]
+  @UI.lineItem: [ {
+    position: 100 
+  } ]
+  @UI.selectionField: [ {
+    position: 100 
+  } ]
+  CreatedAt;
+  
+  @UI.identification: [ {
+    position: 110 
+  } ]
+  @UI.lineItem: [ {
+    position: 110 
+  } ]
+  @UI.selectionField: [ {
+    position: 110 
+  } ]
+  LocalChangedBy;
+  
+  @UI.identification: [ {
+    position: 120 
+  } ]
+  @UI.lineItem: [ {
+    position: 120 
+  } ]
+  @UI.selectionField: [ {
+    position: 120 
+  } ]
+  LocalChangedAt;
+}

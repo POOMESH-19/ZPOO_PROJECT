@@ -1,0 +1,63 @@
+managed implementation in class ZBP_R_POO_EMPLOYEE unique;
+strict ( 2 );
+with draft;
+
+define behavior for ZR_POO_EMPLOYEE alias ZrPooEmployee
+persistent table ZPOO_EMPLOYEE
+draft table ZPOO_EMPLOYEE_D
+
+etag master LocalChangedAt
+lock master total etag LocalChangedAt
+authorization master( global )
+{
+
+  field ( mandatory : create )
+    EmpID,
+    LeaveID,
+    EmpName,
+    LeaveType,
+    FromDate,
+    ToDate;
+
+  field ( readonly )
+    Status,
+    CreatedBy,
+    CreatedAt,
+    LocalChangedBy,
+    LocalChangedAt;
+
+  field ( readonly : update )
+    EmpID,
+    LeaveID;
+
+  create;
+  update;
+  delete;
+
+  determination SetDefaultStatus on modify { create; }
+
+  validation CheckDates on save { create; update; }
+
+  draft action Activate optimized;
+  draft action Discard;
+  draft action Edit;
+  draft action Resume;
+  draft determine action Prepare;
+
+  mapping for ZPOO_EMPLOYEE
+  {
+    EmpID          = EMP_ID;
+    LeaveID        = LEAVE_ID;
+    EmpName        = EMP_NAME;
+    LeaveType      = LEAVE_TYPE;
+    FromDate       = FROM_DATE;
+    ToDate         = TO_DATE;
+    Reason         = REASON;
+    Status         = STATUS;
+    CreatedBy      = CREATED_BY;
+    CreatedAt      = CREATED_AT;
+    LocalChangedBy = LOCAL_CHANGED_BY;
+    LocalChangedAt = LOCAL_CHANGED_AT;
+  }
+
+}

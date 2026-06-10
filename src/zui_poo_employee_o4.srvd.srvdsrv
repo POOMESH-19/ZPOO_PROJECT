@@ -1,0 +1,11 @@
+@EndUserText: {
+  label: 'Service Definition for ZC_POO_EMPLOYEE'
+}
+@ObjectModel: {
+  leadingEntity: {
+    name: 'ZC_POO_EMPLOYEE'
+  }
+}
+define service ZUI_POO_EMPLOYEE_O4 provider contracts odata_v4_ui {
+  expose ZC_POO_EMPLOYEE;
+}
